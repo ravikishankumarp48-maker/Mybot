@@ -1,0 +1,33 @@
+DIGITAL STORE BOT - ANDROID SE FREE HOSTING (SIMPLE STEPS)
+============================================================
+Ye clean version hai. Isme tumhara Bot Token / FamGateway key NAHI hai.
+Token sirf hosting ki Settings me dalna hai, file me kabhi mat likhna.
+
+STEP 1 - GITHUB PAR DALO (Phone se, Chrome me)
+1. github.com par account banao / login karo
+2. New Repository banao, naam: digital-store-bot, Public mat karo - Private rakho
+3. Is zip ko phone me extract karo, saari files upload karo
+
+STEP 2 - KOYEB PAR FREE HOST KARO (Phone se, Chrome me)
+1. koyeb.com par Gmail se login karo
+2. Create Service > GitHub > apna repo select karo
+3. Build: Node.js, Run command: npm start
+4. Environment Variables > Add:
+   Name: BOT_TOKEN
+   Value: tumhara BotFather wala token (Telegram me @BotFather se mila tha)
+5. Deploy dabao. 2-3 minute me bot online ho jayega.
+
+STEP 3 - BOT ME /setup KARO
+1. Telegram me apna bot kholo, /setup bhejo
+2. FamGateway API key dalo
+3. Support Telegram link dalo (jaise https://t.me/rohitxpapaji)
+4. Bas, pehla setup karne wala hi Admin ban jayega.
+
+AGAR KOYEB NA CHALE TO:
+- Render.com par same steps se try karo, par free wala kabhi-kabhi so jata hai.
+  Uske liye uptimerobot.com par apna Render link har 5 minute ping karne ke liye add karo.
+- Sach me 24/7 chahiye to Oracle Cloud Free VPS best hai, par wo laptop se easy hota hai.
+
+YAAD RAKHO:
+- Ye zip kisi ko forward mat karo, isme tumhara 1 product hai.
+- Token kabhi chat me, GitHub me, ya file me mat likhna.

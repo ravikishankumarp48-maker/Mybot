@@ -1,11 +1,74 @@
 {
   "PROD-MVKL1QOL-5162": {
     "id": "PROD-MVKL1QOL-5162",
-    "name": "Bind Gmail & Unbind",
+    "name": "Bind GMail & Unbind",
     "price": 499,
     "fileId": "BQACAgUAAxkBAAM6atr9GwqJlcdgld6iYD8ZMVFInCoAAsIhAAIBYtlWyqQhJNx3CQ49BA",
     "fileName": "bind (1).py",
     "active": true,
     "createdAt": "2026-10-23T06:22:19.221Z"
+  },
+  "PROD-DOUBLE-1650": {
+    "id": "PROD-DOUBLE-1650",
+    "name": "Double Re-Subscribe",
+    "price": 1650,
+    "fileId": "",
+    "fileName": "",
+    "active": true,
+    "createdAt": "2026-11-10T01:36:00.000Z"
+  },
+  "PROD-BANLOGIN-599": {
+    "id": "PROD-BANLOGIN-599",
+    "name": "Ban Acc Login",
+    "price": 599,
+    "fileId": "",
+    "fileName": "",
+    "active": true,
+    "createdAt": "2026-11-10T01:36:00.000Z"
+  },
+  "PROD-PERMBAN-380": {
+    "id": "PROD-PERMBAN-380",
+    "name": "Permanent Ban",
+    "price": 380,
+    "fileId": "",
+    "fileName": "",
+    "active": true,
+    "createdAt": "2026-11-10T01:36:00.000Z"
+  },
+  "PROD-30DAYS-380": {
+    "id": "PROD-30DAYS-380",
+    "name": "30 Days Acc Ban",
+    "price": 380,
+    "fileId": "",
+    "fileName": "",
+    "active": true,
+    "createdAt": "2026-11-10T01:36:00.000Z"
+  },
+  "PROD-GUEST-340": {
+    "id": "PROD-GUEST-340",
+    "name": "Guest Ac Gen",
+    "price": 340,
+    "fileId": "",
+    "fileName": "",
+    "active": true,
+    "createdAt": "2026-11-10T01:36:00.000Z"
+  },
+  "PROD-ACCESS-299": {
+    "id": "PROD-ACCESS-299",
+    "name": "Access token Security Code",
+    "price": 299,
+    "fileId": "",
+    "fileName": "",
+    "active": true,
+    "createdAt": "2026-11-10T01:36:00.000Z"
+  },
+  "PROD-BLACKLIST-599": {
+    "id": "PROD-BLACKLIST-599",
+    "name": "Black-list Gmail",
+    "price": 599,
+    "fileId": "",
+    "fileName": "",
+    "active": true,
+    "createdAt": "2026-11-10T01:36:00.000Z"
   }
 }

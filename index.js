@@ -1,5 +1,11 @@
 'use strict';
 
+// Render Web Service ko ek khula port chahiye, warna wo deploy ko Failed mark kar deta hai.
+// Ye chhota server sirf Render / UptimeRobot ke ping ka jawab deta hai, bot ka kaam nahi badalta.
+const http = require('http');
+const PORT = process.env.PORT || 3000;
+http.createServer((req, res) => { res.writeHead(200, { 'Content-Type': 'text/plain' }); res.end('Bot is running'); }).listen(PORT, () => console.log('Web server listening on port ' + PORT));
+
 const fs = require('fs');
 const path = require('path');
 const TelegramBotModule = require('node-telegram-bot-api');
@@ -400,6 +406,11 @@ async function showEarnings(chatId) {
   });
 }
 async function deliverProduct(chatId, user, p) {
+  if (!p.fileId) {
+    return bot.sendMessage(chatId, `❌ Is product ki delivery file abhi add nahi hui hai.\n\nProduct: ${p.name}\nPrice: ${money(p.price)}\n\nPaise katne se pehle admin ko /admin > Manage Products > Edit File se file add karni hogi. Support se contact karein.`, {
+      reply_markup: inline([[btn('🛟 Support', 'support')], [btn('⬅️ Back', 'products')]])
+    });
+  }
   if (Number(user.wallet) < Number(p.price)) {
     return bot.sendMessage(chatId, `❌ Insufficient balance.\n\nProduct: ${p.name}\nPrice: ${money(p.price)}\nYour balance: ${money(user.wallet)}`, {
       reply_markup: inline([[btn('💚 Add Balance', 'addbalance')], [btn('⬅️ Back', 'products')]])
@@ -544,6 +555,7 @@ bot.on('callback_query', async q => {
     if (data.startsWith('purchase:')) {
       const p = products[data.slice(9)];
       if (!p || p.active === false) return screenMessage(chatId, '❌ This product is no longer available.', {reply_markup:inline([[btn('⬅️ Back','products')]])});
+      if (!p.fileId) return screenMessage(chatId, '❌ Is product ki delivery file abhi add nahi hui hai. Admin ko pehle /admin > Manage Products > Edit File se file add karni hogi.', {reply_markup:inline([[btn('🛟 Support','support')],[btn('⬅️ Back','products')]])});
       if (Number(u.wallet || 0) < Number(p.price || 0)) {
         // Product-specific checkout: create a payment QR for the exact shortfall/price.
         // Keep the current UI screen and do not send the user back to Add Balance.
